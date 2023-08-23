@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import AppRoutes from './AppRoutes';
 import { Layout } from './components/Layout';
-import Register from './Register';
-import Login from './Login.Js';
 import './custom.css';
 
-export default function App() {
+export default class App extends Component {
+  static displayName = App.name;
+
+  render() {
     return (
       <Layout>
         <Routes>
@@ -17,4 +18,5 @@ export default function App() {
         </Routes>
       </Layout>
     );
+  }
 }

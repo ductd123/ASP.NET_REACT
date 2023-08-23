@@ -1,4 +1,4 @@
-﻿namespace ASP.Net___ReactJS.Models
+﻿namespace ASP.Net_React.Models
 {
     public class Employee
     {

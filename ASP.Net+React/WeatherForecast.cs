@@ -1,4 +1,4 @@
-namespace ASP.Net___ReactJS
+namespace ASP.Net_React
 {
     public class WeatherForecast
     {

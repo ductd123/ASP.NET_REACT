@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ASP.Net___ReactJS.Controllers
+namespace ASP.Net_React.Controllers
 {
     [ApiController]
     [Route("[controller]")]

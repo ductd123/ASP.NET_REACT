@@ -1,17 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ASP.Net_React.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Data.SqlClient;
-using System.Configuration;
-using ASP.Net___ReactJS.Models;
 using System.Data;
+using System.Data.SqlClient;
 
-namespace ASP.Net___ReactJS.Controllers
+namespace ASP.Net_React.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
     public class TestController : ControllerBase
     {
-        SqlConnection conn = new SqlConnection("server=APVN-PF3XBMS8\\OLIVER;database=master;Integrated Security=true");
+        SqlConnection conn =new SqlConnection("server=APVN-PF3XBMS8\\OLIVER;database=master;Integrated Security=true");
         SqlCommand cmd = null;
         SqlDataAdapter da = null;
 
@@ -42,7 +39,7 @@ namespace ASP.Net___ReactJS.Controllers
                 }
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 msg = e.Message;
             }
@@ -59,7 +56,7 @@ namespace ASP.Net___ReactJS.Controllers
             {
                 da = new SqlDataAdapter("usp_Login", conn);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.AddWithValue("@Name",employee.Name);
+                da.SelectCommand.Parameters.AddWithValue("@Name", employee.Name);
                 da.SelectCommand.Parameters.AddWithValue("@PhoneNo", employee.PhoneNo);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
