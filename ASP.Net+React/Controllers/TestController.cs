@@ -6,6 +6,9 @@ using System.Data.SqlClient;
 
 namespace ASP.Net_React.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
+
     public class TestController : ControllerBase
     {
         SqlConnection conn =new SqlConnection("server=APVN-PF3XBMS8\\OLIVER;database=master;Integrated Security=true");
@@ -13,7 +16,7 @@ namespace ASP.Net_React.Controllers
         SqlDataAdapter da = null;
 
         [HttpPost]
-        [Route("Registrtion")]
+        [Route("Registration")]
         public string Registration(Employee employee)
         {
             string msg = string.Empty;
